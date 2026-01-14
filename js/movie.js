@@ -29,7 +29,7 @@
         </div>
         <iframe 
   src="https://www.vidking.net/embed/movie/${id}?api_key=${API_KEY}" 
-  width="100%" 
+  width="150%" 
   height="600" 
   frameborder="0" 
   allowfullscreen>
