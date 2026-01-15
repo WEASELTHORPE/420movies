@@ -203,7 +203,7 @@ loadMoreBtn.style.display = 'none';
 
 // Search API function
 async function searchMovies(query) {
-  const url = `${BASE_URL}/search/multi?api_key=${API_KEY}&query=${encodeURIComponent(query)}`;
+  const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`;
   const res = await fetch(url);
   const data = await res.json();
   return data.results;
