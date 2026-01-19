@@ -6,7 +6,7 @@ const apiProxy = createProxyServer();
 const targetUrl = 'https://www.vidking.net/'; // The actual destination
 
 // Proxy requests starting with '/api' to the target URL
-app.use('${id}?api_key=${API_KEY}', (req, res) => {
+app.use('/movie', (req, res) => {
     console.log('Proxying API request to ' + targetUrl + req.url);
     apiProxy.web(req, res, { target: targetUrl, changeOrigin: true });
 });
