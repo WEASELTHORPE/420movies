@@ -59,7 +59,23 @@
         </iframe>
       </div>
       
+      <iframe 
+  src="https://vidsrc.icu/embed/movie/${id}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
+      </div>
 
+      <iframe 
+  src="https://vidsrc.to/embed/movie/${id}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
+      </div>
      
 
 
