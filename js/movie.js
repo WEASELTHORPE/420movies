@@ -34,6 +34,13 @@
   frameborder="0" 
   allowfullscreen>
         </iframe>
+        <iframe 
+  src="https://vidsrc-embed.su/embed/movie?tmdb=${id}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
 
       
 
