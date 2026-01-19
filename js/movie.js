@@ -27,6 +27,10 @@
           </div>
           <p class="mt-4 font-semibold">Rating: ⭐ ${movie.vote_average} / 10</p>
         </div>
+
+
+
+        <div class="mt-8 w-full aspect-video">
         <iframe 
   src="https://www.vidking.net/embed/movie/${id}?api_key=${API_KEY}" 
   width="100%" 
@@ -34,6 +38,9 @@
   frameborder="0" 
   allowfullscreen>
         </iframe>
+        
+
+        
         <iframe 
   src="https://vidsrc-embed.su/embed/movie?tmdb=${id}" 
   width="100%" 
@@ -41,7 +48,16 @@
   frameborder="0" 
   allowfullscreen>
         </iframe>
+      </div>
 
+      <iframe 
+  src="https://vidsrc.cc/v2/embed/movie/${id}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
+      </div>
       
 
      
