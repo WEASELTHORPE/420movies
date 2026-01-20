@@ -31,14 +31,14 @@
 
 
         <div class="mt-8 w-full aspect-video">
-      <iframe 
+      <!--<iframe 
   src="https://vidlink.pro/movie/${id}?api_key=${API_KEY}" 
   width="100%" 
   height="600" 
   frameborder="0" 
   allowfullscreen>
         </iframe>
-
+      -->
 
 
         <iframe 
