@@ -39,7 +39,7 @@ function renderMovies(movies) {
     const movieCard = document.createElement('div');
     movieCard.className = 'bg-gray-100 dark:bg-gray-800 p-2 rounded cursor-pointer hover:scale-105 transition';
     movieCard.innerHTML = `
-      <img class="w-full h-64 object-cover rounded" src="${IMAGE_BASE + movie.poster_path}" alt="${movie.title}" />
+      <img class="w-full h-65 object-cover rounded" src="${IMAGE_BASE + movie.poster_path}" alt="${movie.title}" />
       <h3 class="mt-2 text-center text-lg font-semibold">${movie.title}</h3>
     `;
     movieCard.addEventListener('click', () => {
