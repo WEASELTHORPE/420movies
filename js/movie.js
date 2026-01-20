@@ -31,6 +31,16 @@
 
 
         <div class="mt-8 w-full aspect-video">
+      <iframe 
+  src="https://vidlink.pro/movie/${id}?api_key=${API_KEY}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
+
+
+
         <iframe 
   src="https://www.vidking.net/embed/movie/${id}?api_key=${API_KEY}" 
   width="100%" 
@@ -70,6 +80,15 @@
 
       <iframe 
   src="https://vidsrc.to/embed/movie/${id}" 
+  width="100%" 
+  height="600" 
+  frameborder="0" 
+  allowfullscreen>
+        </iframe>
+      </div>
+
+      <iframe 
+  src="https://player.autoembed.cc/embed/movie/${id}" 
   width="100%" 
   height="600" 
   frameborder="0" 
