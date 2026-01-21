@@ -8,6 +8,7 @@ function hideSpinner() {
   spinner.classList.add('hidden');
 }
 //
+let currentSearchQuery = '';
 let currentPage = 1;
 let currentMode = 'popular'; // 'popular' | 'genre' | 'search'
 //let selectedGenreId = null;
@@ -79,9 +80,20 @@ loadMoreBtn.addEventListener('click', async () => {
     movies = await fetchMoviesByGenre(selectedGenreId, currentPage);
   }
 
+  if (currentMode === 'search') {
+    movies = await searchMovies(currentSearchQuery, currentPage);
+  }
+
   hideSpinner();
+
+  if (movies.length === 0) {
+    loadMoreBtn.style.display = 'none';
+    return;
+  }
+
   renderMovies(movies);
 });
+
 
 
 // Dark mode toggle
@@ -176,38 +188,44 @@ searchInput.addEventListener('keydown', async (e) => {
   if (e.key === 'Enter') {
     const query = e.target.value.trim();
 
+    movieGrid.innerHTML = '';
+    currentPage = 1;
+
     if (!query) {
-      movieGrid.innerHTML = '';
-      currentPage = 1;
+      currentMode = 'popular';
+      loadMoreBtn.style.display = 'inline-block';
       loadInitialMovies();
       return;
     }
 
+    currentMode = 'search';
+    currentSearchQuery = query;
+
     showSpinner();
-    const searchResults = await searchMovies(query);
+    const results = await searchMovies(query, currentPage);
     hideSpinner();
-    movieGrid.innerHTML = '';
 
-    if (searchResults.length === 0) {
-      movieGrid.innerHTML = '<p class="col-span-full text-center text-gray-500 dark:text-gray-400">No movies found.</p>';
+    if (results.length === 0) {
+      movieGrid.innerHTML =
+        '<p class="col-span-full text-center text-gray-500 dark:text-gray-400">No movies found.</p>';
       loadMoreBtn.style.display = 'none';
-      currentMode = 'search';
-loadMoreBtn.style.display = 'none';
-
-    } else {
-      renderMovies(searchResults);
-      loadMoreBtn.style.display = 'none';
+      return;
     }
+
+    renderMovies(results);
+    loadMoreBtn.style.display = 'inline-block';
   }
 });
 
+
 // Search API function
-async function searchMovies(query) {
-  const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`;
+async function searchMovies(query, page = 1) {
+  const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&page=${page}`;
   const res = await fetch(url);
   const data = await res.json();
   return data.results;
 }
+
 
 
 
