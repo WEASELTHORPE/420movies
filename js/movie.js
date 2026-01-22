@@ -86,7 +86,8 @@
   allowfullscreen>
         </iframe>
       </div>
-
+      
+      <!--
       <iframe 
   src="https://player.autoembed.cc/embed/movie/${id}" 
   width="100%" 
@@ -95,7 +96,7 @@
   allowfullscreen>
         </iframe>
       </div>
-     
+     -->
 
 
 
