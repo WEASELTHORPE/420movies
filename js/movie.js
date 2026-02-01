@@ -49,7 +49,7 @@
   allowfullscreen>
         </iframe>
         
-
+      <br><br>
         
         <iframe 
   src="https://vidsrc-embed.su/embed/movie?tmdb=${id}" 
@@ -60,6 +60,8 @@
         </iframe>
       </div>
 
+      <br><br>
+
       <iframe 
   src="https://vidsrc.cc/v2/embed/movie/${id}" 
   width="100%" 
@@ -68,6 +70,8 @@
   allowfullscreen>
         </iframe>
       </div>
+
+      <br><br>
       
       <iframe 
   src="https://vidsrc.icu/embed/movie/${id}" 
@@ -77,6 +81,8 @@
   allowfullscreen>
         </iframe>
       </div>
+
+      <br><br>
 
       <iframe 
   src="https://vidsrc.to/embed/movie/${id}" 
