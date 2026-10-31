@@ -87,7 +87,7 @@
 
   <iframe
   src="https://vidlink.pro/movie/${id}"
-  width="100%" height="560"
+  width="80%" height="560"
   frameborder="0"
   allowfullscreen
 ></iframe>
